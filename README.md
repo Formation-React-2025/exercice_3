@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Formation React 2025
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Exercice 3 - Création d'un composant avec state
 
-## Available Scripts
+### 1 - Initialisation du projet
+Plusieurs possibilités :
+- Continuer sur le même projet
+- Télécharger le projet initialisé depuis le GitHub [Formation React 2025](https://github.com/orgs/Formation-React-2025/repositories) :
+    - ```git clone https://github.com/Formation-React-2025/exercice_3.git```
 
-In the project directory, you can run:
+### 2 - Mise à jour de variable
+- Dans le package ```./src/features/exercice-3/components/on-click-button-with-state```, créer un composant `OnClickButtonWithState` :
+- Le composant est iso au composant `OnClickButton` à la différence qu'il utilise le hook `useState` pour la gestion de sa variable.
+- Appeler le composant dans `App.jsx`
+- Que constatez-vous ?
 
-### `npm start`
+### 3 - Création d'un composant avec state
+- Dans le package ```./src/features/exercice-3/pages```, créer le composant ```Exercice3Page```.
+- Titre : "Exercice 3 - Création d'un composant avec state"
+- Le composant retournera un formulaire avec deux champs de saisie de type ```text``` et un bouton de type ```submit```.
+-  Les champs seront ```controlled``` (i.e. leurs valeurs seront gérées au travers d’un « state » React) et ```required```
+-  Les libellés des champs seront les suivants :
+    - « Nom »
+    - « Prénom »
+- Le bouton portera la mention « Enregistrer ».
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- À la soumission du formulaire, contrôler que les champs obligatoires sont bien renseignés. Si ce n’est pas le cas, afficher les champs en rouge avec le message « Le champ est obligatoire ».
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dans le fichier ```./src/App.jsx```, appeler le composant.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<u>Notes :</u>
+- Afin de ne pas propager l’évènement de validation du formulaire, on pourra utiliser la méthode ```e.preventDefault()```.
+- Nous pourrons utiliser du CSS pour gérer les couleurs ou bien utiliser la props `style`
