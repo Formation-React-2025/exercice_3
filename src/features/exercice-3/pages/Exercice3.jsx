@@ -1,5 +1,5 @@
 import React, { useState, } from 'react';
-import ExerciceLayout from '../../layout/exercice-layout/ExerciceLayout';
+import PageLayout from '../../../commons/components/layout/page-layout/PageLayout';
 import './Exercice3.css';
 
 const requiredFieldError = (value) => {
@@ -46,7 +46,7 @@ const Exercice3 = () => {
   }
 
   return (
-    <ExerciceLayout
+    <PageLayout
       title="Exercice 3"
     >
       <form
@@ -109,7 +109,7 @@ const Exercice3 = () => {
         </button>
 
       </form>
-    </ExerciceLayout>
+    </PageLayout>
   );
 };
 
